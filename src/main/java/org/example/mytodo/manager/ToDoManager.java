@@ -56,7 +56,7 @@ public class ToDoManager {
             preparedStatement.setString(1, todo.getTitle());
             java.util.Date utilDate = todo.getFinishDate();
             if(utilDate != null) {
-                java.sql.Date sqlFinishDate = new java.sql.Date(utilDate.getTime());
+                java.sql.Date sqlFinishDate =  new java.sql.Date(utilDate.getTime());
                 preparedStatement.setDate(2, sqlFinishDate);
             }else{
                 preparedStatement.setNull(2, java.sql.Types.DATE);
